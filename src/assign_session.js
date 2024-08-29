@@ -1,5 +1,6 @@
 function createSession() {
     const contentDiv = document.getElementById('content');
+    window.location.href = 'create_session.html';
     contentDiv.innerHTML = `
         <h2>Create Session</h2>
         <form>

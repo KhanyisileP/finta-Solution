@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logiscool - Create Session</title>
+    <link rel="stylesheet" href="create_session.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Session</h1>
+        <form id="createSessionForm">
+            <div class="form-group">
+                <label for="sessionDate">Session Date:</label>
+                <input type="date" id="sessionDate" name="sessionDate" required>
+            </div>
+            <div class="form-group">
+                <label for="startTime">Start Time:</label>
+                <input type="time" id="startTime" name="startTime" required>
+            </div>
+            <div class="form-group">
+                <label for="endTime">End Time:</label>
+                <input type="time" id="endTime" name="endTime" required>
+            </div>
+            <div class="form-group">
+                <label for="venue">Venue:</label>
+                <input type="text" id="venue" name="venue" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="trainerId">Trainer ID:</label>
+                <select id="trainerId" name="trainerId" required>
+                    <option value="1">Trainer 1</option>
+                    <option value="2">Trainer 2</option>
+                    <!-- Add more trainers dynamically -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="enrollmentId">Enrollment ID:</label>
+                <select id="enrollmentId" name="enrollmentId" required>
+                    <option value="1001">Enrollment 1001</option>
+                    <option value="1002">Enrollment 1002</option>
+                    <!-- Add more enrollments dynamically -->
+                </select>
+            </div>
+            <button type="submit">Create Session</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script src="create_session.js"></script>
+</body>
+</html>
