@@ -76,15 +76,4 @@ function displayTrainers() {
         card.className = 'trainer-card';
 
         card.innerHTML = `
-            <p><strong>First Name:</strong> ${trainer.firstName}</p>
-            <p><strong>Last Name:</strong> ${trainer.lastName}</p>
-            <p><strong>Phone Number:</strong> ${trainer.phoneNumber}</p>
-            <p><strong>Username:</strong> ${trainer.username}</p>
-        `;
-
-        trainersList.appendChild(card);
-    });
-}
-
-// Initialize by displaying all trainers
-window.onload = displayTrainers;
+            <
