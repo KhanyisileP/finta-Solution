@@ -43,8 +43,6 @@ function searchTrainer() {
         document.getElementById('updateFirstName').value = trainer.firstName;
         document.getElementById('updateLastName').value = trainer.lastName;
         document.getElementById('updatePhoneNumber').value = trainer.phoneNumber;
-        document.getElementById('updateUsername').value = trainer.username;
-        document.getElementById('updatePassword').value = trainer.password;
 
         document.getElementById('updateTrainerForm').style.display = 'block';
     } else {
@@ -61,8 +59,6 @@ function updateTrainer() {
         trainer.firstName = document.getElementById('updateFirstName').value;
         trainer.lastName = document.getElementById('updateLastName').value;
         trainer.phoneNumber = document.getElementById('updatePhoneNumber').value;
-        trainer.username = document.getElementById('updateUsername').value;
-        trainer.password = document.getElementById('updatePassword').value;
 
         alert('Trainer updated successfully!');
         document.getElementById('updateTrainerForm').reset();
@@ -72,4 +68,23 @@ function updateTrainer() {
 
 // Display all trainers in View tab
 function displayTrainers() {
-    const trainersList = document.get
+    const trainersList = document.getElementById('trainersList');
+    trainersList.innerHTML = '';
+
+    trainers.forEach(trainer => {
+        const card = document.createElement('div');
+        card.className = 'trainer-card';
+
+        card.innerHTML = `
+            <p><strong>First Name:</strong> ${trainer.firstName}</p>
+            <p><strong>Last Name:</strong> ${trainer.lastName}</p>
+            <p><strong>Phone Number:</strong> ${trainer.phoneNumber}</p>
+            <p><strong>Username:</strong> ${trainer.username}</p>
+        `;
+
+        trainersList.appendChild(card);
+    });
+}
+
+// Initialize by displaying all trainers
+window.onload = displayTrainers;
