@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logiscool - Create Enrollment</title>
+    <link rel="stylesheet" href="create_enrollment.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create Enrollment</h1>
+
+        <!-- Student Selection -->
+        <div class="section">
+            <label for="studentSearch">Search Student:</label>
+            <input type="text" id="studentSearch" placeholder="Enter student name or ID">
+            <button onclick="searchStudent()">Search</button>
+        </div>
+
+        <!-- Student Details Display -->
+        <div id="studentDetails" class="section" style="display: none;">
+            <h2>Student Details</h2>
+            <p><strong>Name:</strong> <span id="studentName"></span></p>
+            <p><strong>Surname:</strong> <span id="studentSurname"></span></p>
+            <p><strong>Age:</strong> <span id="studentAge"></span></p>
+            <p><strong>Date Registered:</strong> <span id="dateRegistered"></span></p>
+            <p><strong>Enrolled For:</strong> <span id="enrolledFor"></span></p>
+        </div>
+
+        <!-- Package Selection -->
+        <div class="section">
+            <label for="packageSelect">Select Package:</label>
+            <select id="packageSelect" onchange="updatePackageOptions()">
+                <option value="" disabled selected>Select a package</option>
+                <option value="course">Course</option>
+                <option value="camp">Camp</option>
+                <option value="workshop">Workshop</option>
+                <option value="openday">Open Day</option>
+            </select>
+        </div>
+
+        <!-- Package Options -->
+        <div id="packageOptions" class="section" style="display: none;">
+            <div id="courseOptions" style="display: none;">
+                <label for="courseSelect">Select Course:</label>
+                <select id="courseSelect">
+                    <option value="Blox 151">Blox 151</option>
+                    <option value="Blox 161">Blox 161</option>
+                    <option value="Blox 171">Blox 171</option>
+                    <option value="Mix 311">Mix 311</option>
+                    <option value="Video production">Video Production</option>
+                    <option value="game designing">Game Designing</option>
+                    <option value="python">Python</option>
+                </select>
+            </div>
+
+            <div id="campOptions" style="display: none;">
+                <label for="campSelect">Select Camp:</label>
+                <select id="campSelect">
+                    <option value="minecraft">Minecraft</option>
+                    <option value="roblox">Roblox</option>
+                    <option value="video design">Video Design</option>
+                    <option value="lego">LEGO</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Enrollment Details -->
+        <div class="section">
+            <button onclick="submitEnrollment()">Submit Enrollment</button>
+        </div>
+    </div>
+    <script src="create_enrollment.js"></script>
+</body>
+</html>
