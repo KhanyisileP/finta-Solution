@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logiscool - Update Enrollment</title>
+    <link rel="stylesheet" href="update_enrollment.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Update Enrollment</h1>
+
+        <!-- Enrollment Selection -->
+        <div class="section">
+            <label for="enrollmentSearch">Search Enrollment:</label>
+            <input type="text" id="enrollmentSearch" placeholder="Enter enrollment ID or student name">
+            <button onclick="searchEnrollment()">Search</button>
+        </div>
+
+        <!-- Enrollment Details Form -->
+        <div id="enrollmentForm" class="section" style="display: none;">
+            <h2>Edit Enrollment</h2>
+
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" disabled>
+
+            <label for="studentSurname">Student Surname:</label>
+            <input type="text" id="studentSurname" disabled>
+
+            <label for="packageSelect">Select Package:</label>
+            <select id="packageSelect" onchange="updatePackageOptions()">
+                <option value="" disabled>Select a package</option>
+                <option value="course">Course</option>
+                <option value="camp">Camp</option>
+                <option value="workshop">Workshop</option>
+                <option value="openday">Open Day</option>
+            </select>
+
+            <div id="packageOptions" style="display: none;">
+                <div id="courseOptions" style="display: none;">
+                    <label for="courseSelect">Select Course:</label>
+                    <select id="courseSelect">
+                        <option value="Blox 151">Blox 151</option>
+                        <option value="Blox 161">Blox 161</option>
+                        <option value="Blox 171">Blox 171</option>
+                        <option value="Mix 311">Mix 311</option>
+                        <option value="Video production">Video Production</option>
+                        <option value="game designing">Game Designing</option>
+                        <option value="python">Python</option>
+                    </select>
+                </div>
+
+                <div id="campOptions" style="display: none;">
+                    <label for="campSelect">Select Camp:</label>
+                    <select id="campSelect">
+                        <option value="minecraft">Minecraft</option>
+                        <option value="roblox">Roblox</option>
+                        <option value="video design">Video Design</option>
+                        <option value="lego">LEGO</option>
+                    </select>
+                </div>
+            </div>
+
+            <button onclick="updateEnrollment()">Update Enrollment</button>
+        </div>
+    </div>
+    <script src="update_enrollment.js"></script>
+</body>
+</html>
