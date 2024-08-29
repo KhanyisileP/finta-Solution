@@ -50,6 +50,7 @@ function updateSession() {
 
 function viewSession() {
     const contentDiv = document.getElementById('content');
+    window.location.href = 'view_session.html';
     contentDiv.innerHTML = `
         <h2>View Sessions</h2>
         <ul>
