@@ -8,6 +8,9 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     if (username === 'user' && password === 'pass') {
         document.getElementById('message').textContent = 'Login successful!';
         document.getElementById('message').style.color = 'green';
+        
+        // Redirect to home page after successful login
+        window.location.href = 'home.html';
     } else {
         document.getElementById('message').textContent = 'Invalid username or password!';
     }
