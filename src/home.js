@@ -17,6 +17,7 @@ function assignSession() {
 
 function manageEnrollment() {
     alert("Manage Enrollment option selected.");
+    window.location.href = 'manage_enrollment.html';
     // Replace this alert with actual navigation or functionality
 }
 
