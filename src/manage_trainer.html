@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logiscool - Manage Trainers</title>
+    <link rel="stylesheet" href="manage_trainer.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Manage Trainers</h1>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tablink active" onclick="openTab(event, 'Create')">Create Trainer</button>
+            <button class="tablink" onclick="openTab(event, 'Update')">Update Trainer</button>
+            <button class="tablink" onclick="openTab(event, 'View')">View Trainers</button>
+        </div>
+
+        <!-- Create Trainer Tab -->
+        <div id="Create" class="tabcontent" style="display: block;">
+            <h2>Create Trainer Profile</h2>
+            <form id="createTrainerForm">
+                <label for="createFirstName">First Name:</label>
+                <input type="text" id="createFirstName" required>
+
+                <label for="createLastName">Last Name:</label>
+                <input type="text" id="createLastName" required>
+
+                <label for="createPhoneNumber">Phone Number:</label>
+                <input type="tel" id="createPhoneNumber" required>
+
+                <label for="createUsername">Username:</label>
+                <input type="text" id="createUsername" required>
+
+                <label for="createPassword">Password:</label>
+                <input type="password" id="createPassword" required>
+
+                <button type="button" onclick="createTrainer()">Create Trainer</button>
+            </form>
+        </div>
+
+        <!-- Update Trainer Tab -->
+        <div id="Update" class="tabcontent">
+            <h2>Update Trainer Profile</h2>
+            <label for="updateSearch">Search Trainer by Username:</label>
+            <input type="text" id="updateSearch" placeholder="Enter username">
+            <button onclick="searchTrainer()">Search</button>
+
+            <form id="updateTrainerForm" style="display: none;">
+                <label for="updateFirstName">First Name:</label>
+                <input type="text" id="updateFirstName" required>
+
+                <label for="updateLastName">Last Name:</label>
+                <input type="text" id="updateLastName" required>
+
+                <label for="updatePhoneNumber">Phone Number:</label>
+                <input type="tel" id="updatePhoneNumber" required>
+
+                <button type="button" onclick="updateTrainer()">Update Trainer</button>
+            </form>
+        </div>
+
+        <!-- View Trainers Tab -->
+        <div id="View" class="tabcontent">
+            <h2>View All Trainers</h2>
+            <div id="trainersList">
+                <!-- Trainer profiles will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+    <script src="manage_trainer.js"></script>
+</body>
+</html>
