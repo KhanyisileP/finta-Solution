@@ -10,6 +10,8 @@ function manageStudents() {
 
 function assignSession() {
     alert("Assign Session option selected.");
+    window.location.href = 'assign_session.html';
+
     // Replace this alert with actual navigation or functionality
 }
 
