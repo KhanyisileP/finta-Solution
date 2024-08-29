@@ -3,28 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logiscool Management System</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Logiscool - Login</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Logiscool Management System</h1>
-        <nav>
-            <ul>
-                <li><a href="views/admin.html">Admin</a></li>
-                <li><a href="views/trainer.html">Trainer</a></li>
-                <li><a href="views/trainee.html">Trainee</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <h2>Select Your Role</h2>
-        <p>Please choose your role to proceed to the appropriate dashboard.</p>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Logiscool Bedfordview</p>
-    </footer>
+    <div class="login-container">
+        <h1>Logiscool</h1>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
