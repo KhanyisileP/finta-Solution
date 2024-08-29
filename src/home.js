@@ -1,5 +1,6 @@
 function manageTrainer() {
     //alert("Manage Trainer option selected.");
+    window.location.href = 'manage_trainer.html';
     // Replace this alert with actual navigation or functionality
 }
 
