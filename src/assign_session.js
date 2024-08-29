@@ -23,6 +23,7 @@ function createSession() {
 
 function updateSession() {
     const contentDiv = document.getElementById('content');
+    window.location.href = 'update_session.html';
     contentDiv.innerHTML = `
         <h2>Update Session</h2>
         <form>
