@@ -45,7 +45,7 @@
             <h2>Update Trainer Profile</h2>
             <label for="updateSearch">Search Trainer by Username:</label>
             <input type="text" id="updateSearch" placeholder="Enter username">
-            <button onclick="searchTrainer()">Search</button>
+            <button type="button" onclick="searchTrainer()">Search</button>
 
             <form id="updateTrainerForm" style="display: none;">
                 <label for="updateFirstName">First Name:</label>
@@ -56,6 +56,12 @@
 
                 <label for="updatePhoneNumber">Phone Number:</label>
                 <input type="tel" id="updatePhoneNumber" required>
+
+                <label for="updateUsername">Username:</label>
+                <input type="text" id="updateUsername" required>
+
+                <label for="updatePassword">Password:</label>
+                <input type="password" id="updatePassword" required>
 
                 <button type="button" onclick="updateTrainer()">Update Trainer</button>
             </form>
