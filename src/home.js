@@ -6,6 +6,7 @@ function manageTrainer() {
 
 function manageStudents() {
     //alert("Manage Students option selected.");
+    window.location.href = 'manage_student.html';
     // Replace this alert with actual navigation or functionality
 }
 
