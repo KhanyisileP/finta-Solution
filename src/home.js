@@ -27,3 +27,21 @@ function manageEnrollment() {
 function logout() {
     window.location.href = 'index.html';
 }
+// Function to fetch trainer data from the PHP script
+function fetchTrainerData() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "diplayethetrainer.php", true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // Print the response to the console
+            console.log(xhr.responseText);
+        }
+    };
+    xhr.send();
+}
+
+// Run the function to fetch the data when the page loads
+window.onload = function() {
+    fetchTrainerData();
+};
+
