@@ -33,8 +33,11 @@ function fetchTrainerData() {
     xhr.open("GET", "diplayethetrainer.php", true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
-            // Print the response to the console
-            console.log(xhr.responseText);
+            // Parse the JSON response
+            var trainers = JSON.parse(xhr.responseText);
+
+            // Log the response to the console
+            console.log(trainers);
         }
     };
     xhr.send();
@@ -44,4 +47,5 @@ function fetchTrainerData() {
 window.onload = function() {
     fetchTrainerData();
 };
+
 
